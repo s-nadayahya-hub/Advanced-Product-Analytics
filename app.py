@@ -196,8 +196,16 @@ try:
             st.warning("Please enter a product keyword")
             st.stop()
 
-    df['Price'] = df['Price'].replace('[\$,]', '', regex=True).astype(float)
-    df['Rating'] = pd.to_numeric(df['Rating'], errors='coerce').fillna(0)
+df['Price'] = (
+    df['Price']
+    .astype(str)
+    .str.replace('EGP', '', regex=False)
+    .str.replace('\xa0', '', regex=False)
+    .str.replace(',', '')
+    .str.strip()
+)
+
+df['Price'] = pd.to_numeric(df['Price'], errors='coerce')    df['Rating'] = pd.to_numeric(df['Rating'], errors='coerce').fillna(0)
     df['Reviews'] = pd.to_numeric(df['Reviews'], errors='coerce').fillna(0)
     df['Positive Feedback %'] = pd.to_numeric(df['Positive Feedback %'], errors='coerce').fillna(0)
 
