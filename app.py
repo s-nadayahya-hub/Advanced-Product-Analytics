@@ -216,7 +216,7 @@ try:
         (1 / df["Price"].replace(0, 1)) * 0.4
         )
 
-    st.sidebar.image("projec.jpeg", width=100)
+    st.sidebar.image("sidebar.png", width=100)
     st.sidebar.title("SCRAPING SYSTEM")
 
     search = st.sidebar.text_input("🎯 Search by Product Name")
