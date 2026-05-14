@@ -182,7 +182,7 @@ try:
     )
 
     if data_source == "CSV File":
-        df = pd.read_csv("products_pandas.csv")
+        df = pd.read_csv("amazon_lip_gloss.csv")
         is_api = False
 
     else:
