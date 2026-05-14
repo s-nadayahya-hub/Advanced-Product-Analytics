@@ -1,0 +1,10 @@
+streamlit
+pandas
+plotly
+numpy
+matplotlib
+seaborn
+requests
+google-search-results
+Pillow
+networkx
