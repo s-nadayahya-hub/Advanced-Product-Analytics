@@ -536,7 +536,7 @@ try:
                  st.success(f"Opening {row['Title']}...")
                  time.sleep(2)
     
-                 webbrowser.open_new_tab(row['Link']
+                 webbrowser.open_new_tab(row['Link'])
 
     # -----------------------
     # Tab 4 (Data)
