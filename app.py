@@ -1,9 +1,9 @@
 best = rec.sort_values(by='Rating', ascending=False).head(3)
 
-            if not best.empty:
-                st.write(best[['Title', 'Price', 'Rating']])
-            else:
-                st.info("No matching products found")
+        if not best.empty:
+            st.write(best[['Title', 'Price', 'Rating']])
+        else:
+            st.info("No matching products found")
 
         # Insight
         st.subheader("📢 Smart Insight")
